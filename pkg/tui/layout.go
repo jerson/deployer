@@ -55,7 +55,7 @@ func (gui *GUI) layout(g *gocui.Gui) error {
 }
 
 func (gui *GUI) initiallyFocusedViewName() string {
-	return "deployments"
+	return "deploy"
 }
 func (gui *GUI) layoutProject() error {
 	maxX, _ := gui.g.Size()
@@ -95,7 +95,7 @@ func (gui *GUI) layoutDeployments() error {
 	if gui.debug {
 		height -= 15
 	}
-	view, err := gui.g.SetViewBeneath("deployments", "options", height)
+	view, err := gui.g.SetViewBeneath("deploy", "options", height)
 	if err != nil && !errors.Is(err, gocui.ErrUnknownView) {
 		return err
 	}

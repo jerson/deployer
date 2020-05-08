@@ -101,7 +101,7 @@ func (gui *GUI) customBinding() binding.DefaultBinding {
 				return gui.onChangeEngine()
 			},
 		},
-		"deployments": {
+		"deploy": {
 			OnKeyUpPress: func(g *gocui.Gui, v *gocui.View) error {
 				state := gui.state.Panels.Deployments
 				err := gui.onChangeSelectedLine(v, &state.SelectedIndex, len(gui.cli.Deployments()), true)

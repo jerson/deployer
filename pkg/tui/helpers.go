@@ -20,7 +20,7 @@ func (gui *GUI) getMainView() (*gocui.View, error) {
 }
 
 func (gui *GUI) getDeploymentsView() (*gocui.View, error) {
-	return gui.g.View("deployments")
+	return gui.g.View("deploy")
 }
 
 func (gui *GUI) getDebugView() (*gocui.View, error) {

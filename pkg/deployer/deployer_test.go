@@ -110,7 +110,7 @@ func printDeployer(ctx context.Context, deploy *Deployer) {
 
 	if len(deploy.deployments) > 0 {
 		log.Info("")
-		log.Info("deployments sorted:")
+		log.Info("deploy sorted:")
 		for key, deployment := range deploymentNames(deploy.deployments) {
 			log.WithField("index", key).Info(deployment)
 		}

@@ -113,7 +113,7 @@ func (d *Deployer) HealthAll(ctx context.Context) error {
 		_ = d.Health(ctx, deployment)
 	}
 	//var wg sync.WaitGroup
-	//for _, deployment := range d.deployments {
+	//for _, deployment := range d.deploy {
 	//	wg.Add(1)
 	//	go func() {
 	//		_ = d.Health(ctx,deployment)

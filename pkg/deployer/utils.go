@@ -12,7 +12,7 @@ import (
 func FunctionName(dependency interface{}) string {
 	name := runtime.FuncForPC(reflect.ValueOf(dependency).Pointer()).Name()
 	parts := strings.Split(name, ".")
-	return strings.Join(parts[1:], ".")
+	return strings.Join(parts[len(parts)-1:], ".")
 }
 
 // PrintTitle ...
